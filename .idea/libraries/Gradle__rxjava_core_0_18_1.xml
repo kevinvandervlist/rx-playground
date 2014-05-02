@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: rxjava-core-0.18.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.rxjava/rxjava-core/0.18.1/a76f8f1a55aaf04f76d9a3922720ad6cc0d10fe7/rxjava-core-0.18.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.rxjava/rxjava-core/0.18.1/75f95f2a2b399c916da52bfcbfbcb9be54f8f09a/rxjava-core-0.18.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
