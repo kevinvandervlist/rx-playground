@@ -92,7 +92,6 @@ public class Excercises {
      *   var itemInArray = movieLists[0];
      * use: movielistsV2
      */
-
     public Observable<Triple<Integer, String, String>> excercise14() {
         return null;
     }
@@ -101,7 +100,6 @@ public class Excercises {
      * Exercise 17: Retrieve the largest rating.
      * use: ratings
      */
-
     public Observable<Integer> excercise17() {
         return null;
     }
@@ -110,7 +108,6 @@ public class Excercises {
      * Exercise 18: Retrieve url of the largest boxart
      * use: boxarts
      */
-
     public Observable<String> excercise18() {
         return null;
     }
@@ -121,7 +118,6 @@ public class Excercises {
      * Let's say we have an array of videos and we want to reduce them to a single map where the key is the video id and the value is the video's title.
      * Use: releasesV3
      */
-
     public Observable<Map<Integer, String>> excercise19() {
         return null;
     }
@@ -132,7 +128,6 @@ public class Excercises {
      * This time we'll use reduce() instead of filter() to retrieve the smallest box art in the boxarts array.
      * use: movielistsV2
      */
-
     public Observable<Triple<Integer, String, String>> excercise20() {
         return null;
     }
@@ -142,7 +137,6 @@ public class Excercises {
      * For each video and bookmark pair, create a {videoId, bookmarkId} pair.
      * use: releasesV1 and bookmarks
      */
-
     public Observable<Pair<Integer, Integer>> excercise23() {
         return null;
     }
@@ -156,7 +150,6 @@ public class Excercises {
      * Return an {id, title, time, url} object for each video.
      * use: movielistsV4
      */
-
     public Observable<Quadruple<Integer, String, Integer, String>> excercise24() {
         return null;
     }
@@ -170,7 +163,6 @@ public class Excercises {
      * In other words we want to build the following structure:
      * use: listsV5, videosV5
      */
-
     public Observable<MovieListV5<ReleaseV5>> excercise25() {
         return null;
     }
@@ -213,8 +205,21 @@ public class Excercises {
      *
      * use: listsV5, videosV5, boxartsV5, bookmarksV5
      */
-
     public Observable<MovieListV5<Quadruple<Integer, String, Integer, String>>> excercise26() {
+        return null;
+    }
+
+    /**
+     * Exercise 28: Stock Ticker
+     * Let's try an easier question. Let's say we have a collection of all of the prices for
+     * NASDAQ stocks over time. Every time the price of a stock changes on the NASDAQ ticker
+     * an entry is added to this collection. Let's say that ten days ago you bought shares in
+     * Microsoft, and now you want to print all of the MSFT share prices since then.
+     * Filter the collection for MSFT trades starting from ten days ago and print each price record
+     * (including the time stamp) using the print() function. Note: this is not a trick question.
+     * It's as easy as it seems
+     */
+    public Observable<> excercise28() {
         return null;
     }
 }
