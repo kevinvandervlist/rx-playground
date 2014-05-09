@@ -1,4 +1,4 @@
-Functional Programming in Java~~Script~~
+Functional Programming in Java ~~Script~~
 =======
 
 This is an adoption of the Reactive Programming JavaScript [tutorial](http://reactive-extensions.github.io/learnrx/) ([code](https://github.com/Reactive-Extensions/learnrx)), but focused at [RxJava](). A number of exercises have been 'implemented' in this project. I tried to mirror the behaviour of the learnrx tutorial, in which you can just open up an exercise, and try to complete it.
