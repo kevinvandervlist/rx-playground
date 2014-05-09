@@ -13,23 +13,23 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solutions extends Excercises {
+public class Solutions extends Exercises {
 
-    public Observable<Pair<Integer, String>> excercise5() {
+    public Observable<Pair<Integer, String>> exercise5() {
         return releasesV1.map((x) -> new Pair<>(x.id, x.title));
     }
 
-    public Observable<Integer> excercise8() {
+    public Observable<Integer> exercise8() {
         return releasesV1
             .filter((x) -> x.rating == 5.0)
             .map((x) -> x.id);
     }
 
-    public Observable<Integer> excercise11() {
+    public Observable<Integer> exercise11() {
         return movielistsV1.flatMap((x) -> Observable.from(x.releases).map((y) -> y.id));
     }
 
-    public Observable<Triple<Integer, String, String>> excercise14() {
+    public Observable<Triple<Integer, String, String>> exercise14() {
         return movielistsV2.flatMap((mlist) ->
             Observable.from(mlist.releases).flatMap((release) ->
                 Observable.from(release.boxart)
@@ -41,11 +41,11 @@ public class Solutions extends Excercises {
         );
     }
 
-    public Observable<Integer> excercise17() {
+    public Observable<Integer> exercise17() {
         return ratings.reduce(Integer::max);
     }
 
-    public Observable<String> excercise18() {
+    public Observable<String> exercise18() {
         return boxarts.reduce((accumulator, current) -> {
             if(accumulator.height * accumulator.width > current.width * current.height) {
                 return accumulator;
@@ -55,7 +55,7 @@ public class Solutions extends Excercises {
         }).map((boxart) -> boxart.url);
     }
 
-    public Observable<Map<Integer, String>> excercise19() {
+    public Observable<Map<Integer, String>> exercise19() {
         Map<Integer, String> mymap = new HashMap<>();
         return releasesV3.reduce(mymap, (accumulator, current) -> {
             accumulator.put(current.id, current.title);
@@ -63,7 +63,7 @@ public class Solutions extends Excercises {
         });
     }
 
-    public Observable<Triple<Integer, String, String>> excercise20() {
+    public Observable<Triple<Integer, String, String>> exercise20() {
         return movielistsV2.flatMap((mlist) ->
             Observable.from(mlist.releases).flatMap((release) ->
                 Observable.from(release.boxart).reduce((accumulator, current) -> {
@@ -77,11 +77,11 @@ public class Solutions extends Excercises {
         );
     }
 
-    public Observable<Pair<Integer, Integer>> excercise23() {
+    public Observable<Pair<Integer, Integer>> exercise23() {
         return releasesV1.zip(bookmarks, (r, b) -> new Pair<>(r.id, b.id));
     }
 
-    public Observable<Quadruple<Integer, String, Integer, String>> excercise24() {
+    public Observable<Quadruple<Integer, String, Integer, String>> exercise24() {
         return movielistsV4.
             flatMap((movieList) -> Observable.from(movieList.releases).
                 flatMap((release) -> Observable.zip(
@@ -98,7 +98,7 @@ public class Solutions extends Excercises {
         );
     }
 
-    public Observable<MovieListV5<ReleaseV5>> excercise25() {
+    public Observable<MovieListV5<ReleaseV5>> exercise25() {
         return listsV5.map((list) -> new MovieListV5<>(
                 list.name,
                 videosV5
@@ -107,7 +107,7 @@ public class Solutions extends Excercises {
         ));
     }
 
-    public Observable<MovieListV5<Quadruple<Integer, String, Integer, String>>> excercise26() {
+    public Observable<MovieListV5<Quadruple<Integer, String, Integer, String>>> exercise26() {
         return listsV5.map((list) ->
             new MovieListV5<>(
                 list.name,
@@ -130,7 +130,7 @@ public class Solutions extends Excercises {
     }
 
     @Override
-    public Observable<StockV6> excercise28() {
+    public Observable<StockV6> exercise28() {
         final Date tenDaysAgo = StockMarketV6.getNumDaysAgo(10);
         return StockMarketV6.getRandomNASDAQ(25)
                 .filter((stock) -> stock.name.equals("MSFT") && stock.timestamp.compareTo(tenDaysAgo) > 0);

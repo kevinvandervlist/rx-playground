@@ -23,11 +23,11 @@ import java.util.Arrays;
 import java.util.Map;
 
 /**
- * The excercises are taken from the following project:
+ * The exercises are taken from the following project:
  * https://github.com/Reactive-Extensions/learnrx
  */
 
-public class Excercises {
+public class Exercises {
     public final Observable<ReleaseV1> releasesV1;
     public final Observable<MovieListV1> movielistsV1;
     public final Observable<ReleaseV2> releasesV2;
@@ -42,7 +42,7 @@ public class Excercises {
     public final Observable<BoxartV5> boxartsV5;
     public final Observable<BookmarkV5> bookmarksV5;
 
-    public Excercises() {
+    public Exercises() {
         releasesV1 = Observable.from(LibraryV1.getReleases());
         movielistsV1 = Observable.from(LibraryV1.getMovieListReleases());
         releasesV2 = Observable.from(LibraryV2.getReleases());
@@ -66,7 +66,7 @@ public class Excercises {
      * Exercise 5: Use map() to project an array of videos into an array of {id,title} pairs
      * use: releasesV1
      */
-    public Observable<Pair<Integer, String>> excercise5() {
+    public Observable<Pair<Integer, String>> exercise5() {
         return null;
     }
 
@@ -74,7 +74,7 @@ public class Excercises {
      * Exercise 8: Chain filter and map to collect the ids of videos that have a rating of 5.0
      * use: releasesV1
      */
-    public Observable<Integer> excercise8() {
+    public Observable<Integer> exercise8() {
         return null;
     }
 
@@ -83,7 +83,7 @@ public class Excercises {
      * i.e.: Use map and flatMap();
      * use: movielistsV1
      */
-    public Observable<Integer> excercise11() {
+    public Observable<Integer> exercise11() {
         return null;
     }
 
@@ -93,7 +93,7 @@ public class Excercises {
      *   var itemInArray = movieLists[0];
      * use: movielistsV2
      */
-    public Observable<Triple<Integer, String, String>> excercise14() {
+    public Observable<Triple<Integer, String, String>> exercise14() {
         return null;
     }
 
@@ -101,7 +101,7 @@ public class Excercises {
      * Exercise 17: Retrieve the largest rating.
      * use: ratings
      */
-    public Observable<Integer> excercise17() {
+    public Observable<Integer> exercise17() {
         return null;
     }
 
@@ -109,7 +109,7 @@ public class Excercises {
      * Exercise 18: Retrieve url of the largest boxart
      * use: boxarts
      */
-    public Observable<String> excercise18() {
+    public Observable<String> exercise18() {
         return null;
     }
 
@@ -119,7 +119,7 @@ public class Excercises {
      * Let's say we have an array of videos and we want to reduce them to a single map where the key is the video id and the value is the video's title.
      * Use: releasesV3
      */
-    public Observable<Map<Integer, String>> excercise19() {
+    public Observable<Map<Integer, String>> exercise19() {
         return null;
     }
 
@@ -129,7 +129,7 @@ public class Excercises {
      * This time we'll use reduce() instead of filter() to retrieve the smallest box art in the boxarts array.
      * use: movielistsV2
      */
-    public Observable<Triple<Integer, String, String>> excercise20() {
+    public Observable<Triple<Integer, String, String>> exercise20() {
         return null;
     }
 
@@ -138,7 +138,7 @@ public class Excercises {
      * For each video and bookmark pair, create a {videoId, bookmarkId} pair.
      * use: releasesV1 and bookmarks
      */
-    public Observable<Pair<Integer, Integer>> excercise23() {
+    public Observable<Pair<Integer, Integer>> exercise23() {
         return null;
     }
 
@@ -151,7 +151,7 @@ public class Excercises {
      * Return an {id, title, time, url} object for each video.
      * use: movielistsV4
      */
-    public Observable<Quadruple<Integer, String, Integer, String>> excercise24() {
+    public Observable<Quadruple<Integer, String, Integer, String>> exercise24() {
         return null;
     }
 
@@ -164,7 +164,7 @@ public class Excercises {
      * In other words we want to build the following structure:
      * use: listsV5, videosV5
      */
-    public Observable<MovieListV5<ReleaseV5>> excercise25() {
+    public Observable<MovieListV5<ReleaseV5>> exercise25() {
         return null;
     }
 
@@ -206,7 +206,7 @@ public class Excercises {
      *
      * use: listsV5, videosV5, boxartsV5, bookmarksV5
      */
-    public Observable<MovieListV5<Quadruple<Integer, String, Integer, String>>> excercise26() {
+    public Observable<MovieListV5<Quadruple<Integer, String, Integer, String>>> exercise26() {
         return null;
     }
 
@@ -220,7 +220,7 @@ public class Excercises {
      * It's as easy as it seems
      * use: StockMarketV6.getRandomNASDAQ(25), Date tenDaysAgo = StockMarketV6.getNumDaysAgo(10);
      */
-    public Observable<StockV6> excercise28() {
+    public Observable<StockV6> exercise28() {
         return null;
     }
 }

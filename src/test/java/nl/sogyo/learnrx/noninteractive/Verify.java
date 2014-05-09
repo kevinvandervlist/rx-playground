@@ -17,104 +17,104 @@ import static org.junit.Assert.assertTrue;
 
 public abstract class Verify {
 
-    public abstract Excercises getExcercise();
+    public abstract Exercises getExercise();
 
     @Test
-    public void excercise5() {
+    public void exercise5() {
         List<Pair<Integer, String>> expected = new ArrayList<>();
 
         for(ReleaseV1 release : LibraryV1.getReleases()) {
             expected.add(new Pair<>(release.id, release.title));
         }
 
-        Observable<Pair<Integer, String>> resultObservable = getExcercise().excercise5();
+        Observable<Pair<Integer, String>> resultObservable = getExercise().exercise5();
         resultObservable.toList().subscribe((result) -> assertEquals(expected, result));
     }
 
     @Test
-    public void excercise8() {
+    public void exercise8() {
         List<Integer> expected = new ArrayList<>();
         expected.add(654356453);
         expected.add(675465);
-        getExcercise().excercise8().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise8().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise11() {
+    public void exercise11() {
         List<Integer> expected = new ArrayList<>();
         expected.add(654356453);
         expected.add(70111470);
         expected.add(65432445);
         expected.add(675465);
-        getExcercise().excercise11().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise11().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise14() {
+    public void exercise14() {
         List<Triple<Integer, String, String>> expected = new ArrayList<>();
         expected.add(new Triple<>(654356453, "Bad Boys", "http://cdn-0.nflximg.com/images/2891/BadBoys150.jpg"));
         expected.add(new Triple<>(70111470, "Die Hard", "http://cdn-0.nflximg.com/images/2891/DieHard150.jpg"));
         expected.add(new Triple<>(65432445, "The Chamber", "http://cdn-0.nflximg.com/images/2891/TheChamber150.jpg"));
         expected.add(new Triple<>(675465, "The Fracture", "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"));
-        getExcercise().excercise14().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise14().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise17() {
+    public void exercise17() {
         List<Integer> expected = new ArrayList<>();
         expected.add(5);
-        getExcercise().excercise17().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise17().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise18() {
+    public void exercise18() {
         List<String> expected = new ArrayList<>();
         expected.add("http://cdn-0.nflximg.com/images/2891/Fracture425.jpg");
-        getExcercise().excercise18().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise18().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise19() {
+    public void exercise19() {
         Map<Integer, String> expected = new HashMap<>();
         expected.put(654356453, "Bad Boys");
         expected.put(70111470, "Die Hard");
         expected.put(675465, "Fracture");
         expected.put(65432445, "The Chamber");
-        getExcercise().excercise19().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise19().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise20() {
+    public void exercise20() {
         List<Triple<Integer, String, String>> expected = new ArrayList<>();
         expected.add(new Triple<>(654356453, "Bad Boys", "http://cdn-0.nflximg.com/images/2891/BadBoys150.jpg"));
         expected.add(new Triple<>(70111470, "Die Hard", "http://cdn-0.nflximg.com/images/2891/DieHard150.jpg"));
         expected.add(new Triple<>(65432445, "The Chamber", "http://cdn-0.nflximg.com/images/2891/TheChamber150.jpg"));
         expected.add(new Triple<>(675465, "The Fracture", "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"));
-        getExcercise().excercise20().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise20().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise23() {
+    public void exercise23() {
         List<Pair<Integer, Integer>> expected = new ArrayList<>();
         expected.add(new Pair<>(70111470, 470));
         expected.add(new Pair<>(654356453, 453));
         expected.add(new Pair<>(65432445, 445));
-        getExcercise().excercise23().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise23().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise24() {
+    public void exercise24() {
         List<Quadruple<Integer, String, Integer, String>> expected = new ArrayList<>();
         expected.add(new Quadruple<>(654356453, "Bad Boys", 6575665, "http://cdn-0.nflximg.com/images/2891/BadBoys150.jpg"));
         expected.add(new Quadruple<>(70111470, "Die Hard", 323133, "http://cdn-0.nflximg.com/images/2891/DieHard150.jpg"));
         expected.add(new Quadruple<>(65432445, "The Chamber", 3452343, "http://cdn-0.nflximg.com/images/2891/TheChamber150.jpg"));
         expected.add(new Quadruple<>(675465, "The Fracture", 3453434, "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"));
-        getExcercise().excercise24().toList().subscribe((actual) -> assertEquals(expected, actual));
+        getExercise().exercise24().toList().subscribe((actual) -> assertEquals(expected, actual));
     }
 
     @Test
-    public void excercise25() {
-        List<MovieListV5<ReleaseV5>> result = getExcercise().excercise25().toList().toBlockingObservable().single();
+    public void exercise25() {
+        List<MovieListV5<ReleaseV5>> result = getExercise().exercise25().toList().toBlockingObservable().single();
         assertEquals(2, result.size());
 
         MovieListV5<ReleaseV5> first = result.get(0);
@@ -136,9 +136,9 @@ public abstract class Verify {
     }
 
     @Test
-    public void excercise26() {
+    public void exercise26() {
         List<MovieListV5<Quadruple<Integer, String, Integer, String>>> result =
-                getExcercise().excercise26().toList().toBlockingObservable().single();
+                getExercise().exercise26().toList().toBlockingObservable().single();
 
         assertEquals(2, result.size());
 
@@ -161,14 +161,14 @@ public abstract class Verify {
     }
 
     @Test
-    public void excercise28() throws Throwable {
+    public void exercise28() throws Throwable {
         final List<Throwable> throwable = new ArrayList<>();
 
         Calendar c = new GregorianCalendar();
         c.add(Calendar.DAY_OF_MONTH, -10);
         final Date tenDaysAgo = c.getTime();
 
-        getExcercise().excercise28().doOnError(throwable::add).subscribe((x) -> {
+        getExercise().exercise28().doOnError(throwable::add).subscribe((x) -> {
             assertEquals("MSFT", x.name);
             assertTrue(x.timestamp.compareTo(tenDaysAgo) > 0);
         });

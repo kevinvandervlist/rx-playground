@@ -5,7 +5,7 @@ public class VerifySolutions extends Verify {
     private Solutions solutions = new Solutions();
 
     @Override
-    public Excercises getExcercise() {
+    public Exercises getExercise() {
         return solutions;
     }
 }
