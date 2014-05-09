@@ -7,4 +7,4 @@ To do this, open either an interactive or a non-interactive exercise, and comple
 
 Some exercises contain a short summary on what the assignment is, but for the complete story or for more details, one can always look at the [original tutorial](http://reactive-extensions.github.io/learnrx/).
 
-To learn more about RxJava or its operators you should head over to [their wiki](https://github.com/Netflix/RxJava/wiki), which contains excellent documentation and marble diagrams on how RxJava works.
+To learn more about RxJava or its operators you should head over to [their wiki](https://github.com/Netflix/RxJava/wiki), which contains excellent documentation and marble diagrams on how RxJava works. As for Rx itself, [Introduction to Rx](http://www.introtorx.com/) is an excellent resource.
