@@ -10,12 +10,10 @@ import nl.sogyo.learnrx.data.V5.ReleaseV5;
 import org.junit.Test;
 import rx.Observable;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public abstract class Verify {
 
@@ -160,5 +158,25 @@ public abstract class Verify {
 
         first.releases.subscribe((actual) -> assertEquals(expectedFirst, actual));
         last.releases.subscribe((actual) -> assertEquals(expectedLast, actual));
+    }
+
+    @Test
+    public void excercise28() throws Throwable {
+        final List<Throwable> throwable = new ArrayList<>();
+
+        Calendar c = new GregorianCalendar();
+        c.add(Calendar.DAY_OF_MONTH, -10);
+        final Date tenDaysAgo = c.getTime();
+
+        getExcercise().excercise28().doOnError(throwable::add).subscribe((x) -> {
+            assertEquals("MSFT", x.name);
+            assertTrue(x.timestamp.compareTo(tenDaysAgo) > 0);
+        });
+
+        Thread.sleep(500);
+
+        if(throwable.size() != 0) {
+            throw throwable.get(0);
+        }
     }
 }

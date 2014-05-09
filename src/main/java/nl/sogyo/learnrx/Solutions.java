@@ -5,8 +5,11 @@ import nl.sogyo.learnrx.containers.Triple;
 import nl.sogyo.learnrx.containers.Pair;
 import nl.sogyo.learnrx.data.V5.MovieListV5;
 import nl.sogyo.learnrx.data.V5.ReleaseV5;
+import nl.sogyo.learnrx.data.V6.StockMarketV6;
+import nl.sogyo.learnrx.data.V6.StockV6;
 import rx.Observable;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,7 +42,7 @@ public class Solutions extends Excercises {
     }
 
     public Observable<Integer> excercise17() {
-        return ratings.reduce((accumulator, current) -> Integer.max(accumulator, current));
+        return ratings.reduce(Integer::max);
     }
 
     public Observable<String> excercise18() {
@@ -96,13 +99,12 @@ public class Solutions extends Excercises {
     }
 
     public Observable<MovieListV5<ReleaseV5>> excercise25() {
-        return listsV5.map((list) -> {
-            return new MovieListV5<ReleaseV5>(list.name, videosV5.filter((video) -> {
-                return video.listId == list.id;
-            }).map((video) -> {
-                return new ReleaseV5(video.id, video.title);
-            }));
-        });
+        return listsV5.map((list) -> new MovieListV5<>(
+                list.name,
+                videosV5
+                    .filter((video) -> video.listId == list.id)
+                    .map((video) -> new ReleaseV5(video.id, video.title))
+        ));
     }
 
     public Observable<MovieListV5<Quadruple<Integer, String, Integer, String>>> excercise26() {
@@ -125,5 +127,12 @@ public class Solutions extends Excercises {
                     )
             ))
         );
+    }
+
+    @Override
+    public Observable<StockV6> excercise28() {
+        final Date tenDaysAgo = StockMarketV6.getNumDaysAgo(10);
+        return StockMarketV6.getRandomNASDAQ(25)
+                .filter((stock) -> stock.name.equals("MSFT") && stock.timestamp.compareTo(tenDaysAgo) > 0);
     }
 }

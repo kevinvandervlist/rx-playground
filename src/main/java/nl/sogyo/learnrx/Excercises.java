@@ -1,8 +1,8 @@
 package nl.sogyo.learnrx;
 
+import nl.sogyo.learnrx.containers.Pair;
 import nl.sogyo.learnrx.containers.Quadruple;
 import nl.sogyo.learnrx.containers.Triple;
-import nl.sogyo.learnrx.containers.Pair;
 import nl.sogyo.learnrx.data.V1.BookmarkV1;
 import nl.sogyo.learnrx.data.V1.LibraryV1;
 import nl.sogyo.learnrx.data.V1.MovieListV1;
@@ -16,6 +16,7 @@ import nl.sogyo.learnrx.data.V3.ReleaseV3;
 import nl.sogyo.learnrx.data.V4.LibraryV4;
 import nl.sogyo.learnrx.data.V4.MovieListV4;
 import nl.sogyo.learnrx.data.V5.*;
+import nl.sogyo.learnrx.data.V6.StockV6;
 import rx.Observable;
 
 import java.util.Arrays;
@@ -215,11 +216,11 @@ public class Excercises {
      * NASDAQ stocks over time. Every time the price of a stock changes on the NASDAQ ticker
      * an entry is added to this collection. Let's say that ten days ago you bought shares in
      * Microsoft, and now you want to print all of the MSFT share prices since then.
-     * Filter the collection for MSFT trades starting from ten days ago and print each price record
-     * (including the time stamp) using the print() function. Note: this is not a trick question.
+     * Filter the collection for MSFT trades starting from ten days ago. Note: this is not a trick question.
      * It's as easy as it seems
+     * use: StockMarketV6.getRandomNASDAQ(25), Date tenDaysAgo = StockMarketV6.getNumDaysAgo(10);
      */
-    public Observable<> excercise28() {
+    public Observable<StockV6> excercise28() {
         return null;
     }
 }
