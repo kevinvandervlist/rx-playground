@@ -1,4 +1,4 @@
-package nl.sogyo.learnrx;
+package nl.sogyo.learnrx.noninteractive;
 
 import nl.sogyo.learnrx.containers.Quadruple;
 import nl.sogyo.learnrx.containers.Triple;
