@@ -5,9 +5,9 @@ import rx.Observable;
 import java.awt.event.MouseEvent;
 import java.util.concurrent.TimeUnit;
 
-public class Exercises {
+public class EventWindowDemo {
     public static void main(String[] args) {
-        Exercises e = new Exercises();
+        EventWindowDemo e = new EventWindowDemo();
         //e.hugeNumberOfMouseEvents();
         //e.throttledMouseEvents();
         //e.autoUnsubscribeAfterTake10();
