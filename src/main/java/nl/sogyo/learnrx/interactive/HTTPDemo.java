@@ -11,9 +11,9 @@ public class HTTPDemo {
 
     public static void main(String[] args) {
         HTTPDemo demo = new HTTPDemo();
-        //demo.start();
-        //demo.filterBoardingKLM();
-        demo.boardingWindow();
+        demo.start();
+        demo.filterBoardingKLM();
+        demo.KLMBoardingInformation();
     }
 
     public void start() {
@@ -29,10 +29,12 @@ public class HTTPDemo {
                 .subscribe(System.out::println, System.err::println);
     }
 
-    public void boardingWindow() {
-        //BoardingWindow bw = new BoardingWindow()
+    public void KLMBoardingInformation() {
         DeparturesFactory.statusChangedDepartures()
-                .filter((de) -> de.state.equals(DepartureState.CHANGED))
+                .filter((de) -> de.state.equals(DepartureState.CHANGED) || de.state.equals(DepartureState.NEW))
+                .map((de) -> de.departure)
+                .filter((d) -> d.carrier.contains("KLM"))
+                .filter((d) -> d.status.equalsIgnoreCase("Boarding"))
                 .subscribe(System.out::println);
     }
 }
