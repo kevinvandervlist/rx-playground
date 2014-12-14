@@ -93,7 +93,7 @@ public class Solutions extends Exercises {
                         }
                     }),
                     Observable.from(release.interestingMoments).filter((m) -> m.type.equals("Middle")),
-                    (b, i) -> new Quadruple<Integer, String, Integer, String>(release.id, release.title, i.time, b.url)
+                    (b, i) -> new Quadruple<>(release.id, release.title, i.time, b.url)
                     ))
         );
     }

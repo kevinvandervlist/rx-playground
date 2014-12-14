@@ -1,6 +1,7 @@
 package nl.sogyo.learnrx.data.V4;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class InterestingMoment {
@@ -15,9 +16,7 @@ public class InterestingMoment {
 
     public static List<InterestingMoment> interestingMomentFactory(InterestingMoment... moments) {
         List<InterestingMoment> bms = new ArrayList<>(moments.length);
-        for(int i = 0; i < moments.length; i++) {
-            bms.add(moments[i]);
-        }
+        Collections.addAll(bms, moments);
         return bms;
     }
 }

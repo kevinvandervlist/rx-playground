@@ -1,6 +1,7 @@
 package nl.sogyo.learnrx.data.V5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BoxartV5 {
@@ -19,9 +20,7 @@ public class BoxartV5 {
 
     public static List<BoxartV5> boxartFactory(BoxartV5... boxarts) {
         List<BoxartV5> boxes = new ArrayList<>(boxarts.length);
-        for(int i = 0; i < boxarts.length; i++) {
-            boxes.add(boxarts[i]);
-        }
+        Collections.addAll(boxes, boxarts);
         return boxes;
     }
 }

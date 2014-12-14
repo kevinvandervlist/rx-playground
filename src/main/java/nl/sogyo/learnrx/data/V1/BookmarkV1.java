@@ -1,6 +1,7 @@
 package nl.sogyo.learnrx.data.V1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BookmarkV1 {
@@ -15,9 +16,7 @@ public class BookmarkV1 {
 
     public static List<BookmarkV1> bookmarkFactory(BookmarkV1... bookmarks) {
         List<BookmarkV1> bms = new ArrayList<>(bookmarks.length);
-        for(int i = 0; i < bookmarks.length; i++) {
-            bms.add(bookmarks[i]);
-        }
+        Collections.addAll(bms, bookmarks);
         return bms;
     }
 }
