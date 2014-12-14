@@ -78,7 +78,7 @@ public class Solutions extends Exercises {
     }
 
     public Observable<Pair<Integer, Integer>> exercise23() {
-        return releasesV1.zip(bookmarks, (r, b) -> new Pair<>(r.id, b.id));
+        return releasesV1.zipWith(bookmarks, (r, b) -> new Pair<>(r.id, b.id));
     }
 
     public Observable<Quadruple<Integer, String, Integer, String>> exercise24() {

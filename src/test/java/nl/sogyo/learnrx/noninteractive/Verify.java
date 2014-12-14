@@ -114,7 +114,7 @@ public abstract class Verify {
 
     @Test
     public void exercise25() {
-        List<MovieListV5<ReleaseV5>> result = getExercise().exercise25().toList().toBlockingObservable().single();
+        List<MovieListV5<ReleaseV5>> result = getExercise().exercise25().toList().toBlocking().single();
         assertEquals(2, result.size());
 
         MovieListV5<ReleaseV5> first = result.get(0);
@@ -138,7 +138,7 @@ public abstract class Verify {
     @Test
     public void exercise26() {
         List<MovieListV5<Quadruple<Integer, String, Integer, String>>> result =
-                getExercise().exercise26().toList().toBlockingObservable().single();
+                getExercise().exercise26().toList().toBlocking().single();
 
         assertEquals(2, result.size());
 
